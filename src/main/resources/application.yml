@@ -1,12 +1,12 @@
 server:
-  port: 1453
+  port: 8080
 spring:
   config:
     activate:
       on-profile: default
   data:
     mongodb:
-      host: localhost
+      host: host.docker.internal
       port: 27017
       database: reactiveSpringExample
       username: blacksea
