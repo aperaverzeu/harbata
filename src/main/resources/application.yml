@@ -1,0 +1,28 @@
+server:
+  port: 1453
+spring:
+  config:
+    activate:
+      on-profile: default
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: reactiveSpringExample
+      username: blacksea
+      password: blacksea
+      authentication-database: admin
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  data:
+    mongodb:
+      host: mongo
+      port: 27017
+      database: reactiveSpringExample
+      username: blacksea
+      password: blacksea
+      authentication-database: admin
