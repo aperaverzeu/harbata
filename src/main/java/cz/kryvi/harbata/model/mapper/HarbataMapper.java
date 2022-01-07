@@ -10,6 +10,6 @@ import java.util.function.Function;
 public class HarbataMapper implements Function<HarbataDTO, Harbata> {
     @Override
     public Harbata apply(HarbataDTO harbataDTO) {
-        return new Harbata(harbataDTO.id(), harbataDTO.name());
+        return new Harbata(harbataDTO.id(), harbataDTO.name(), harbataDTO.latinScript(), harbataDTO.description());
     }
 }
