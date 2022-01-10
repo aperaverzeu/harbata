@@ -20,6 +20,15 @@ public record HarbataService(HarbataRepository harbataRepository) {
                 });
     }
 
+    public Mono<Harbata> getOneByName(String name) {
+        return harbataRepository
+                .findHarbataByName(name)
+                .doOnError(throwable -> {
+                    log.error("Oops! Error here. It seems we don't have this harbata element");
+                    throw new IllegalStateException(throwable);
+                });
+    }
+
     public Flux<Harbata> getAll() {
         return harbataRepository
                 .findAll()

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest(classes = HarbataMapper.class)
 class HarbataMapperTest {
@@ -17,11 +18,13 @@ class HarbataMapperTest {
     @Test
     @DisplayName("Now Entity!")
     void shouldTurnDTOIntoEntity() {
-        var harbataDTO = new HarbataDTO(42L, "Bychaviec");
+        var harbataDTO = new HarbataDTO(42L, "Быхавец", "Bychaviec", "");
 
         var harbata = harbataMapper.apply(harbataDTO);
 
         assertEquals(42L, harbata.getId());
-        assertEquals("Bychaviec", harbata.getName());
+        assertEquals("Быхавец", harbata.getName());
+        assertEquals("Bychaviec", harbata.getLatinScript());
+        assertTrue(harbata.getDescription().isEmpty());
     }
 }
