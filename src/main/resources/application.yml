@@ -6,7 +6,7 @@ spring:
       on-profile: default
   data:
     mongodb:
-      host: host.docker.internal
+      host: localhost
       port: 27017
       database: reactiveSpringExample
       username: blacksea
@@ -20,7 +20,7 @@ spring:
       on-profile: docker
   data:
     mongodb:
-      host: mongo
+      host: host.docker.internal
       port: 27017
       database: reactiveSpringExample
       username: blacksea
