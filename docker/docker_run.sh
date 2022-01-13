@@ -7,4 +7,4 @@ mvn clean install -DskipTests
 cd docker
 docker-compose up -d mongo
 sleep 5
-docker-compose up -d app
+docker-compose up -d --build app

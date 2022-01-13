@@ -12,9 +12,9 @@ services:
     volumes:
       - "vol_mongo:/var/lib/mongo"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: blacksea
-      MONGO_INITDB_ROOT_PASSWORD: blacksea
-      MONGO_INITDB_DATABASE: reactiveSpringExample
+      MONGO_INITDB_ROOT_USERNAME: ales
+      MONGO_INITDB_ROOT_PASSWORD: 8tron1Pa55word
+      MONGO_INITDB_DATABASE: viacera
   app:
     container_name: app
     build: ../
