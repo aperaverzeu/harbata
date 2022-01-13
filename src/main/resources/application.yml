@@ -8,21 +8,7 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: reactiveSpringExample
-      username: blacksea
-      password: blacksea
-      authentication-database: admin
-
----
-spring:
-  config:
-    activate:
-      on-profile: docker
-  data:
-    mongodb:
-      host: host.docker.internal
-      port: 27017
-      database: reactiveSpringExample
-      username: blacksea
-      password: blacksea
+      database: viacera
+      username: ales
+      password: 8tron1Pa55word
       authentication-database: admin
