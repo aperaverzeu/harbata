@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mongo:
     container_name: mongo
-    image: mongo
+    image: mongo:4.4
     restart: always
     networks:
       - harbata_net
@@ -22,8 +22,6 @@ services:
       - harbata_net
     ports:
       - "8080:8080"
-    links:
-      - mongo
     depends_on:
       - mongo
 

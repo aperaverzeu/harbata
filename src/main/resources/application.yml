@@ -1,12 +1,9 @@
 server:
   port: 8080
 spring:
-  config:
-    activate:
-      on-profile: default
   data:
     mongodb:
-      host: localhost
+      host: mongo
       port: 27017
       database: viacera
       username: ales
