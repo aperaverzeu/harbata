@@ -15,9 +15,9 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ales
       MONGO_INITDB_ROOT_PASSWORD: 8tron1Pa55word
       MONGO_INITDB_DATABASE: viacera
-  app:
-    container_name: app
-    build: ../
+  slounik:
+    container_name: slounik
+    build: ../backend/slounik/
     networks:
       - harbata_net
     ports:
