@@ -17,7 +17,7 @@ services:
       MONGO_INITDB_DATABASE: viacera
   slounik:
     container_name: slounik
-    build: ../backend/slounik/
+    build: ./backend/slounik
     networks:
       - harbata_net
     ports:
