@@ -9,7 +9,9 @@ import reactor.core.publisher.Mono;
 @RequestMapping(value = "/")
 public class HomeController {
     @GetMapping
-    public Mono<String> hello() {
-        return Mono.just("Hello!");
+    public Mono<Void> hello() {
+        return Mono
+                .just("Hello!")
+                .then();
     }
 }
