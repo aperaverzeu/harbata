@@ -41,7 +41,7 @@ public record HarbataController(HarbataService harbataService,
         return harbataService.save(harbataMapper.apply(harbata))
                 .log()
                 .map(ResponseEntity::ok)
-                .defaultIfEmpty(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build());
+                .defaultIfEmpty(ResponseEntity.internalServerError().build());
     }
 
     @PutMapping
@@ -49,7 +49,7 @@ public record HarbataController(HarbataService harbataService,
         return harbataService.update(harbataMapper.apply(harbata))
                 .log()
                 .map(ResponseEntity::ok)
-                .defaultIfEmpty(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build());
+                .defaultIfEmpty(ResponseEntity.internalServerError().build());
     }
 
     @DeleteMapping("/{id}")
