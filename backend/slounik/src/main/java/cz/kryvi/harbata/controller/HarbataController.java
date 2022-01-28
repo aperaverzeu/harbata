@@ -4,7 +4,6 @@ import cz.kryvi.harbata.model.dto.HarbataDTO;
 import cz.kryvi.harbata.model.entity.Harbata;
 import cz.kryvi.harbata.model.mapper.HarbataMapper;
 import cz.kryvi.harbata.service.HarbataService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.*;
 import org.springframework.web.bind.annotation.*;
