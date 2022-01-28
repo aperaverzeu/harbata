@@ -24,4 +24,9 @@ public class Harbata {
     private String latinScript;
 
     private String description;
+
+    @Override
+    public String toString() {
+        return String.format("Harbata[%d, %s]", id, name);
+    }
 }
